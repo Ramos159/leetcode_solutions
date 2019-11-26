@@ -36,8 +36,15 @@ class Solution:
                 checker[num] = i
 
 # Explanation: 
+
 # I started with writing the find_pair function.
 # It would return me the correct pair needed add up to target based on the num i was iterating over.
 # I would check to see if my dict "checker" has seen the pair i needed
 # If it did not see the pair, i would store the num as the key, and its index as the value.
 # If i did see the pair in checker, i would return a list with the current i and the value stored in the key of pair
+
+#Complexity: 
+
+# Worst case:
+#   space: O(N), with the growing key and value entries the checker dict gets bigger
+#   time: O(N), you might have to go through all the numbers in nums to find your pair
