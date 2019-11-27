@@ -1,5 +1,3 @@
-# 2. Add Two Numbers
-
 # Description: 
 
 # You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
@@ -46,11 +44,14 @@ class Solution:
 # get_number use a string as a suedo list to append my numbers to, then cast the reverse string using list sling to an int.
 # the loop says while node is a truthy value and not something like None, do this.
 # this being add this node value to the string as a string, the next node is node.next .
+
 # Initiate a Singly Linked List with answer, ListNode needs a starting number so i give it 0. 
 # Current serves a pointer to the current node im dealing with and is used in loop below to keep track of where i am in the list.
+
 # To start the for loop i iterate over a string which happens to be the value of both list numbers added together in reverse using list slicing again.
 # In the loop i take current, assign their next attribute to be a new list node with value of num cast into a int.
 # I change current to be the next value of itself and repeat the loop until its done. 
+
 # Remember that we instantied the list with an value that means nothing to us. We can not return just answer for this reason, it has to be answer.next cause thats where we started adding our values. 
 
 # Complexities: 
