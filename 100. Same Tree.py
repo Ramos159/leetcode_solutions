@@ -98,4 +98,4 @@ class Solution:
 #   space: O(N), q and p list created will be as long as the count of tree nodes
 #   time: O(N), we got a while loop that goes through most of the list. 
 
-#Note1: This line for some reason probably handles a weird edge case, it seems a bit unncessary for me to insert a value we most likely accounted for in while loop checking for either left or right.
+# Note1: This line for some reason probably handles a weird edge case, it seems a bit unncessary for me to insert a value we most likely accounted for in while loop checking for either left or right.
