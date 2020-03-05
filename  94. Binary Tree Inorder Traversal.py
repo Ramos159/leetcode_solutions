@@ -47,6 +47,37 @@ class Solution:
 #   Space: O(N), bigger the tree the more space we need for answer and recurssion
 #   Time: O(N), bigger the tree the more functions we will run to account for them.
 
-# follow up: 
+# Follow up: 
 
-# comming soon
+# Runtime: 24 ms, faster than 87.51% of Python3 online submissions for Binary Tree Inorder Traversal.
+# Memory Usage: 12.8 MB, less than 100.00% of Python3 online submissions for Binary Tree Inorder Traversal.
+
+class Solution:
+    def inorderTraversal(self, root: TreeNode) -> List[int]:
+
+        stack = []
+        answer = []
+        
+        while root or stack:
+            
+            while root:
+                stack.append(root)
+                root = root.left
+                
+            root = stack.pop()
+            answer.append(root.val)
+            
+            root = root.right
+        
+        return answer
+
+# Explanation:
+
+# anything that can be done recursively can be done iteratively, and so we have a challenge
+# we start with a stack and answer list. like last solution we're gonna return answer at the end
+# we use a while with the condition that checks for a root or stack, if a stack is empty its false.
+# so if we have a root go through all the possible left nodes.
+# if you get the a null node we stop and pop the stack to get the last node we had.
+# we log the node in answer cause its the left most node.
+# then all we say is root is now the right one, if thats null than we just pop the stack and go again. 
+# at the end of it all we should have a nice array to return
